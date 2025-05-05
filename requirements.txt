@@ -1,0 +1,13 @@
+# 后端依赖
+Django==4.2.7
+djangorestframework==3.14.0
+django-cors-headers==4.3.0
+Pillow==10.1.0
+python-dotenv==1.0.0
+mysqlclient==2.2.0 
+
+# 开发工具
+pytest==7.4.3
+pytest-django==4.7.0
+black==23.11.0
+flake8==6.1.0 
