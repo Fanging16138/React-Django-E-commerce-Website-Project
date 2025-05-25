@@ -9,28 +9,30 @@ import { showLoginModal } from '../component/Home/Login';
 const Container = styled.div``
 
 const Wrapper = styled.div`
-    margin-top: 10px;
-    padding: 20px;
+    margin-top: 0.25rem;  /* 10px */
+    padding: 0.5rem;  /* 20px */
 `
 
 const Title = styled.h1`
     font-weight: 300;
     text-align: center;
+    font-size: 0.6rem;  /* 24px */
 `
 
 const Top = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px;
+    padding: 0.5rem;  /* 20px */
 `
 
 const TopButton = styled.button`
-    padding: 10px;
+    padding: 0.25rem;  /* 10px */
     font-weight: 600;
     cursor: pointer;
     background-color: transparent;
-    border: 1px solid #000;
+    border: 0.025rem solid #000;  /* 1px */
+    font-size: 0.6rem;  /* 14px */
     &:hover {
         background-color: #f8f8f8;
     }
@@ -38,19 +40,20 @@ const TopButton = styled.button`
 
 const TopTexts = styled.div`
     display: flex;
-    gap: 20px;
+    gap: 0.5rem;  /* 20px */
 `
 
 const TopText = styled.span`
     text-decoration: underline;
     cursor: pointer;
-    margin: 0px 10px;
+    margin: 0 0.25rem;  /* 0px 10px */
+    font-size: 0.4rem;  /* 16px */
 `
 
 const Bottom = styled.div`
     display: flex;
     justify-content: space-between;
-    padding: 20px;
+    padding: 0.5rem;  /* 20px */
 `
 
 const Info = styled.div`
@@ -62,22 +65,22 @@ const Info = styled.div`
 const Product = styled.div`
     display: flex;
     justify-content: space-between;
-    margin-bottom: 20px;
-    padding: 20px;
-    border: 1px solid #eee;
-    border-radius: 5px;
+    margin-bottom: 0.5rem;  /* 20px */
+    padding: 0.5rem;  /* 20px */
+    border: 0.025rem solid #eee;  /* 1px */
+    border-radius: 0.125rem;  /* 5px */
     position: relative;
 `
 
 const ProductDetail = styled.div`
     flex: 2;
     display: flex;
-    gap: 20px;
+    gap: 0.5rem;  /* 20px */
 `
 
 const Image = styled.div`
-    width: 200px;
-    height: 200px;
+    width: 5rem;  /* 200px */
+    height: 5rem;  /* 200px */
     img {
         width: 100%;
         height: 100%;
@@ -86,30 +89,30 @@ const Image = styled.div`
 `
 
 const Details = styled.div`
-    padding: 20px;
+    padding: 0.5rem;  /* 20px */
     display: flex;
     flex-direction: column;
     justify-content: space-around;
 `
 
 const ProductName = styled.div`
-    font-size: 20px;
+    font-size: 0.5rem;  /* 20px */
     span {
-        margin-left: 10px;
+        margin-left: 0.25rem;  /* 10px */
     }
 `
 
 const ProductColor = styled.div`
-    font-size: 16px;
+    font-size: 0.4rem;  /* 16px */
     span {
-        margin-left: 10px;
+        margin-left: 0.25rem;  /* 10px */
     }
 `
 
 const ProductSize = styled.div`
-    font-size: 16px;
+    font-size: 0.4rem;  /* 16px */
     span {
-        margin-left: 10px;
+        margin-left: 0.25rem;  /* 10px */
     }
 `
 
@@ -119,31 +122,31 @@ const PriceDetail = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    font-size: 24px;
+    font-size: 0.6rem;  /* 24px */
 `
 
 const Summary = styled.div`
     flex: 1;
-    border: 1px solid #eee;
-    border-radius: 5px;
-    padding: 20px;
+    border: 0.025rem solid #eee;  /* 1px */
+    border-radius: 0.125rem;  /* 5px */
+    padding: 0.5rem;  /* 20px */
     height: 50vh;
     h2 {
         font-weight: 300;
-        margin-bottom: 30px;
+        margin-bottom: 0.75rem;  /* 30px */
     }
 `
 
 const Remove = styled.button`
     cursor: pointer;
-    margin-right: 10px;
+    margin-right: 0.25rem;  /* 10px */
     border: none;
-    width: 30px;
-    height: 30px;
+    width: 0.75rem;  /* 30px */
+    height: 0.75rem;  /* 30px */
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 18px;
+    font-size: 0.45rem;  /* 18px */
     background-color: #f8f8f8;
     border-radius: 50%;
     &:hover {
@@ -153,14 +156,14 @@ const Remove = styled.button`
 
 const Add = styled.button`
     cursor: pointer;
-    margin-left: 10px;
+    margin-left: 0.25rem;  /* 10px */
     border: none;
-    width: 40px;
-    height: 30px;
+    width: 1rem;  /* 40px */
+    height: 0.75rem;  /* 30px */
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 18px;
+    font-size: 0.45rem;  /* 18px */
     background-color: #f8f8f8;
     border-radius: 50%;
     &:hover {
@@ -171,73 +174,74 @@ const Add = styled.button`
 const ProductAmountContainer = styled.div`
     display: flex;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 0.5rem;  /* 20px */
 `
 
 const ProductAmount = styled.div`
-    font-size: 20px;
-    margin: 0 5px;
+    font-size: 0.5rem;  /* 20px */
+    margin: 0 0.125rem;  /* 0 5px */
 `
 
 const ProductPrice = styled.div`
-    font-size: 25px;
+    font-size: 0.625rem;  /* 25px */
     font-weight: 500;
 `
 
 const Hr = styled.hr`
     background-color: #eee;
     border: none;
-    height: 1px;
+    height: 0.025rem;  /* 1px */
 `
 
 const SummaryItem = styled.div`
-    margin: 20px 0;
+    margin: 0.5rem 0;  /* 20px 0 */
     padding-left: 0;
     text-align: left;
 `
 
 const SummaryItemText = styled.span`
-    font-size: 16px;
+    font-size: 0.4rem;  /* 16px */
     color: #666;
 `
 
 const SummaryItemPrice = styled.span`
-    font-size: 16px;
+    font-size: 0.4rem;  /* 16px */
     font-weight: 500;
     float: right;
 `
 
 const SummaryItemButton = styled.button`
     width: 100%;
-    padding: 15px;
+    padding: 0.375rem;  /* 15px */
     background-color: black;
     color: white;
     border: none;
     font-weight: 600;
-    margin-top: 20px;
+    margin-top: 0.5rem;  /* 20px */
     cursor: pointer;
     transition: all 0.3s ease;
+    font-size: 0.45rem;  /* 18px */
     &:hover {
         background-color: #333;
     }
 `
 
 const SummaryTitle = styled.h2`
-    font-size: 24px;
+    font-size: 0.5rem;  /* 20px */
     font-weight: 300;
-    margin-bottom: 30px;
+    margin-bottom: 0.75rem;  /* 30px */
 `
 
 const DeleteButton = styled.button`
     position: absolute;
-    top: 20px;
-    right: 20px;
-    width: 30px;
-    height: 30px;
+    top: 0.5rem;  /* 20px */
+    right: 0.5rem;  /* 20px */
+    width: 0.75rem;  /* 30px */
+    height: 0.75rem;  /* 30px */
     border: none;
     background-color: transparent;
     color: #999;
-    font-size: 20px;
+    font-size: 0.5rem;  /* 20px */
     cursor: pointer;
     display: flex;
     align-items: center;

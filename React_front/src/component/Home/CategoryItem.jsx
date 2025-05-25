@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 
 const Container = styled.div`
     flex: 1;
-    margin: 5px;
+    margin: 0.125rem;  /* 5px */
     height: 65vh;
     position: relative;
     @media (max-width: 480px) {
@@ -43,29 +43,29 @@ const Info = styled.div`
 `
 
 const Title = styled.h1`
-    font-size: 45px;
+    font-size: 1.125rem;  /* 45px */
     color: white;
-    margin-bottom: 20px;
-    -webkit-text-stroke: 2px black;  // 增加边框粗细并改为黑色
+    margin-bottom: 0.5rem;  /* 20px */
+    -webkit-text-stroke: 0.05rem black;  /* 2px */
     @media (max-width: 480px) {
-        font-size: 15px;
+        font-size: 1.2rem;  /* 15px */
         -webkit-text-stroke: none;  // 取消边框
         text-shadow: none;  // 取消阴影
     }
     text-shadow: 
-        2px 2px 0 #000,
-        -2px -2px 0 #000,
+        0.05rem 0.05rem 0 #000,  /* 2px */
+        -0.05rem -0.05rem 0 #000,  /* -2px */
 `
 
 const Button = styled(motion.button)`
-    padding: 10px;
+    padding: 0.25rem;  /* 10px */
     background-color: white;
     color: rgb(58, 65, 65);
     border: none;
     cursor: pointer;
     font-weight: 600;
     @media (max-width: 480px) {
-        font-size: 8px;
+        font-size: 0.8rem; 
     }
 `
 

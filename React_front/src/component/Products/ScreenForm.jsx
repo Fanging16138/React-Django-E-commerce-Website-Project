@@ -4,22 +4,22 @@ import { useLocation } from 'react-router-dom';
 
 const FormContainer = styled.div`
     position: absolute;
-    top: 100%; /* 相对于父元素底部 */
+    top: 100%;
     right: 0;
     background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    min-width: 200px;
+    border-radius: 0.2rem;  /* 8px */
+    box-shadow: 0 0.05rem 0.25rem rgba(0, 0, 0, 0.1);  /* 0 2px 10px */
+    min-width: 5rem;  /* 200px */
     z-index: 1000;
 `
 
 const Option = styled.div`
-    padding: 12px 20px;
-    font-size: 14px;
+    padding: 0.3rem 0.5rem;  /* 12px 20px */
+    font-size: 0.35rem;  /* 14px */
     color: ${props => props.selected ? '#fff' : '#666'};
     cursor: pointer;
     transition: all 0.3s ease;
-    border-bottom: 1px solid #eee;
+    border-bottom: 0.025rem solid #eee;  /* 1px */
     background-color: ${props => props.selected ? '#87CEEB' : 'transparent'};
 
     &:last-child {

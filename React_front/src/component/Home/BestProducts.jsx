@@ -5,7 +5,7 @@ import BestProductItem from "./BestProductItem"
 import { useNavigate } from "react-router-dom";
 
 const Container = styled.div`
-    padding: 20px;
+    padding: 0.5rem;  /* 20px */
     display: flex;
     flex-wrap: wrap; // 自动换行
     justify-content: space-between;
@@ -13,22 +13,22 @@ const Container = styled.div`
 
 const LoadingMessage = styled.div`
     text-align: center;
-    padding: 20px;
-    font-size: 18px;
+    padding: 0.5rem;  /* 20px */
+    font-size: 0.45rem;  /* 18px */
     color: #666;
 `
 
 const ErrorMessage = styled.div`
     text-align: center;
-    padding: 20px;
+    padding: 0.5rem;  /* 20px */
     color: red;
-    font-size: 18px;
+    font-size: 0.45rem;  /* 18px */
 `
 
 const More = styled.button`
     background-color: transparent;
     border: none;
-    font-size: 20px;
+    font-size: 0.5rem;  /* 20px */
     cursor: pointer;
     color:rgba(147, 146, 146, 0.64);
     background: linear-gradient(
@@ -43,10 +43,10 @@ const More = styled.button`
     animation: shine 3s linear infinite;
     display: flex;
     align-items: center;
-    gap: 10px;
-    padding: 5px 15px;
+    gap: 0.25rem;  /* 10px */
+    padding: 0.125rem 0.375rem;  /* 5px 15px */
     margin-left: auto;
-    margin-right: 20px;
+    margin-right: 0.5rem;  /* 20px */
     transition: border-color 0.3s ease;
 
     &:hover {
@@ -64,8 +64,8 @@ const More = styled.button`
 `
 
 const ArrowIcon = styled.img`
-    width: 20px;
-    height: 20px;
+    width: 0.5rem;  /* 20px */
+    height: 0.5rem;  /* 20px */
 `
 
 const BestProducts = () => {

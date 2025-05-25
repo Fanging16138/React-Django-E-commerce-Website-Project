@@ -7,12 +7,10 @@ import { useLocation } from "react-router-dom";
 import ScreenForm from "./ScreenForm";
 
 const Container = styled.div`
-    margin-top: 50px;
+    margin-top: 0.5rem;
     padding-left: 0;
     text-align: left;
 `
-
-
 
 const FilterContainer = styled.div`
     display: flex;
@@ -21,13 +19,13 @@ const FilterContainer = styled.div`
 `
 
 const Filter = styled.div`
-    margin: 10px;
+    margin: 0.25rem;  /* 10px */
     display: flex;
-    gap: 20px;  // 添加间距
+    gap: 0.5rem;  /* 20px */
 `
 
 const Title = styled.h3`
-    font-size: 15px;
+    font-size: 0.375rem;  /* 15px */
     font-weight: 500;
     margin: 0;
     padding: 0;
@@ -35,7 +33,7 @@ const Title = styled.h3`
 
 const Sale = styled.button`
     border: none;
-    padding: 8px 15px;
+    padding: 0.2rem 0.375rem;  /* 8px 15px */
     background-color: ${props => props.$active ? 'rgba(166, 227, 202, 0.5)' : 'rgba(227, 227, 227, 0.3)'};
     cursor: pointer;
     display: flex;
@@ -56,12 +54,12 @@ const Sale = styled.button`
 
 const Price = styled.button`
     border: none;
-    padding: 8px 15px;
+    padding: 0.2rem 0.375rem;  /* 8px 15px */
     background-color: ${props => props.$active ? 'rgba(166, 227, 202, 0.5)' : 'rgba(227, 227, 227, 0.3)'};
     cursor: pointer;
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 0.125rem;  /* 5px */
     transition: all 0.3s ease;
     outline: none;
     
@@ -77,14 +75,14 @@ const Price = styled.button`
 `
 
 const ArrowIcon = styled.img`
-    width: 16px;
-    height: 16px;
+    width: 0.4rem;  /* 16px */
+    height: 0.4rem;  /* 16px */
     transition: transform 0.3s ease;
 `
 
 const New = styled.button`
     border: none;
-    padding: 8px 15px;
+    padding: 0.2rem 0.375rem;  /* 8px 15px */
     background-color: ${props => props.$active ? 'rgba(166, 227, 202, 0.5)' : 'rgba(227, 227, 227, 0.3)'};
     cursor: pointer;
     display: flex;
@@ -106,8 +104,8 @@ const New = styled.button`
 const FilterCategory = styled.div`
     display: flex;
     align-items: center;
-    padding: 8px 15px;
-    font-size: 15px;
+    padding: 0.2rem 0.375rem;  /* 8px 15px */
+    font-size: 0.375rem;  /* 15px */
     color: #666;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -120,12 +118,12 @@ const FilterCategory = styled.div`
 
 const Screen = styled.button`
     border: none;
-    padding: 8px 15px;
+    padding: 0.2rem 0.375rem;  /* 8px 15px */
     background-color: rgba(227, 227, 227, 0.3);
     cursor: pointer;
     display: flex;
     align-items: center;
-    gap: 7px;
+    gap: 0.175rem;  /* 7px */
     transition: all 0.3s ease;
     outline: none;
     
@@ -141,8 +139,8 @@ const Screen = styled.button`
 `
 
 const ScreenIcon = styled.img`
-    width: 16px;
-    height: 16px;
+    width: 0.4rem;  /* 16px */
+    height: 0.4rem;  /* 16px */
 `
 
 function ProductList() {

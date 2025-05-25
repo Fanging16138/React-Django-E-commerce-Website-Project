@@ -1,36 +1,42 @@
 import styled from "styled-components"
 import { useRef } from "react"
+
 const Container = styled.div`
-    height: 65vh;
+    height: 16.25rem;  /* 65vh */
     background-color: #fcf5f5;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    margin-top: 80px;
+    margin-top: 2rem;  /* 80px */
 `
+
 const Title = styled.h1`
-    font-size: 65px;
-    margin-bottom: 20px;
+    font-size: 1.625rem;  /* 65px */
+    margin-bottom: 0.5rem;  /* 20px */
 `
+
 const Description = styled.div`
-    font-size: 24px;
+    font-size: 0.6rem;  /* 24px */
     font-weight: 300;
-    margin-bottom: 20px;
+    margin-bottom: 0.5rem;  /* 20px */
 `
+
 const InputContainer = styled.div`
     width: 50%;
-    height: 40px;
+    height: 1rem;  /* 40px */
     background-color: white;
     display: flex;
     justify-content: space-between;
-    border: 1px solid lightgray;
+    border: 0.025rem solid lightgray;  /* 1px */
 `
+
 const Input = styled.input`
     border: none;
     flex: 8;
-    padding-left: 20px;
+    padding-left: 0.5rem;  /* 20px */
 `
+
 const Button = styled.button`
     flex: 1;
     border: none;
@@ -41,9 +47,10 @@ const Button = styled.button`
     justify-content: center;
     cursor: pointer;
 `
+
 const Send = styled.img`
-    width: 20px;
-    height: 20px;
+    width: 0.5rem;  /* 20px */
+    height: 0.5rem;  /* 20px */
 `
 
 

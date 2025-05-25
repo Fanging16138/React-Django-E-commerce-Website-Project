@@ -2,9 +2,10 @@ import React, { useState, useEffect, useMemo } from "react";
 import styled from "styled-components";
 import ProductItem from "./ProductItem";
 import { fetchProducts } from "../../Data/products";
+import axios from "axios";
 
 const Container = styled.div`
-    padding: 20px;
+    padding: 0.5rem;  /* 20px */
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;

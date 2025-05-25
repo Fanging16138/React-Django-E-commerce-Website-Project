@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import useScrollPosition from '../../hooks/useScrollPosition';
 
 const Container = styled.div`
-    height: 30px;
+    height: 0.75rem;  /* 30px */
     background-color: rgb(90, 191, 159);
     color: white;
     position: fixed;
@@ -18,36 +18,24 @@ const Container = styled.div`
     width: 100%;
     max-width: 100vw;
     overflow-x: hidden;
-
     @media (max-width: 480px) {
-        height: 20px;
-        padding: 0 10px;
+        height: 1.2rem;
     }
 `;
 
 const Content = styled.div`
-    font-size: 14px;
+    font-size: 0.35rem;  /* 14px */
     font-weight: 500;
-    letter-spacing: 1px;
+    letter-spacing: 0.025rem;  /* 1px */
     text-align: center;
-    padding: 0 20px;
+    padding: 0 0.5rem;  /* 20px */
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     width: 100%;
     max-width: 100%;
-
-    @media (max-width: 768px) {
-        font-size: 12px;
-        letter-spacing: 0.5px;
-        padding: 0 15px;
-    }
-
     @media (max-width: 480px) {
-        font-size: 10px;
-        letter-spacing: 0.3px;
-        padding: 0 10px;
-        max-width: 90vw;
+        font-size: 0.8rem;
     }
 `;
 

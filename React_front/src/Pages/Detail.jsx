@@ -13,34 +13,34 @@ const Container = styled.div`
 
 const BackButton = styled.div`
     position: absolute;
-    top: 120px;
-    left: 20px;
-    width: 40px;
-    height: 40px;
+    top: 3rem;  /* 120px */
+    left: 0.5rem;  /* 20px */
+    width: 1rem;  /* 40px */
+    height: 1rem;  /* 40px */
     background-color: white;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 0.05rem 0.125rem rgba(0,0,0,0.1);  /* 0 2px 5px */
     z-index: 10;
     transition: all 0.3s ease;
 
     &:hover {
         transform: scale(1.1);
-        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        box-shadow: 0 0.1rem 0.2rem rgba(0,0,0,0.2);  /* 0 4px 8px */
     }
 
     svg {
-        width: 24px;
-        height: 24px;
+        width: 0.6rem;  /* 24px */
+        height: 0.6rem;  /* 24px */
         color: #333;
     }
 `
 
 const Wrapper = styled.div`
-    padding: 50px;
+    padding: 1.25rem;  /* 50px */
     display: flex;
 `
 
@@ -49,44 +49,52 @@ const ImageContainer = styled.div`
 `
 
 const Image = styled.img`
-    width: 100%;
-    height: 80vh;
+    width: 15rem;
+    height: 17rem;
     object-fit: cover;
+    @media (max-width: 12rem) {  /* 480px */
+        height: 7.5rem;  /* 30vh */
+        width: 12.5rem;  /* 50vw */
+    }
 `
 
 const InfoContainer = styled.div`
     flex: 1;
-    padding: 0px 50px;
-    padding-left: 80px;
+    padding: 0 1.25rem;  /* 0px 50px */
+    padding-left: 2rem;  /* 80px */
     text-align: left;
 `
 
 const Title = styled.h1`
     font-weight: 200;
+    font-size: 1.25rem;  /* 20px */
 `
 
 const Price = styled.span`
     font-weight: 100;
-    font-size: 40px;
+    font-size: 1rem;  /* 40px */
 `
 
 const Desc = styled.p`
-    margin: 20px 0px;
+    margin: 0.5rem 0;  /* 20px 0px */
+    font-size: 0.4rem;  /* 16px */
 `
 
 const Time = styled.p`
-    margin: 20px 0px;
+    margin: 0.5rem 0;  /* 20px 0px */
     color: #666;
+    font-size: 0.4rem;  /* 16px */
 `
 
 const Saled = styled.p`
-    margin: 20px 0px;
+    margin: 0.5rem 0;  /* 20px 0px */
     color: #666;
+    font-size: 0.4rem;  /* 16px */
 `
 
 const FilterContainer = styled.div`
     width: 50%;
-    margin: 30px 0px;
+    margin: 0.75rem 0;  /* 30px 0px */
     display: flex;
     justify-content: space-between;
 `
@@ -97,13 +105,13 @@ const Filter = styled.div`
 `
 
 const FilterTitle = styled.span`
-    font-size: 20px;
+    font-size: 0.5rem;  /* 20px */
     font-weight: 200;
 `
 
 const FilterColor = styled.div`
-    width: 20px;
-    height: 20px;
+    width: 0.5rem;  /* 20px */
+    height: 0.5rem;  /* 20px */
     border-radius: 50%;
     background: ${props =>{
         if (props.$color.includes('and')) {
@@ -117,16 +125,17 @@ const FilterColor = styled.div`
             return props.$color;
         }
     }};
-    margin: 0px 6px;
+    margin: 0 0.15rem;  /* 0px 6px */
     cursor: pointer;
-    margin-left: 8px;
-    border: ${props => props.$selected ? '2px solid #000' : '1px solid #ddd'};
+    margin-left: 0.2rem;  /* 8px */
+    border: ${props => props.$selected ? '0.05rem solid #000' : '0.025rem solid #ddd'};  /* 2px : 1px */
 `
 
 const FilterSize = styled.select`
-    margin-left: 10px;
-    padding: 3px;
+    margin-left: 0.25rem;  /* 10px */
+    padding: 0.075rem;  /* 3px */
     cursor: pointer;
+    font-size: 0.4rem;  /* 16px */
 `
 
 const FilterSizeOption = styled.option`
@@ -135,12 +144,21 @@ const FilterSizeOption = styled.option`
 
 const AddContainer = styled.div``
 
-const AmountContainer = styled.div``
+const AmountContainer = styled.div`
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;  /* 40px */
+`
 
-const Amount = styled.span``
+const Amount = styled.span`
+    font-size: 0.5rem;  /* 20px */
+    margin: 0 0.25rem;  /* 0 10px */
+`
 
 const Button = styled.button`
-    margin-top: 40px;
+    margin-top: 1rem;  /* 40px */
+    padding: 0.5rem 1rem;  /* 20px 40px */
+    font-size: 0.5rem;  /* 20px */
     &:hover {
         background-color: rgb(226, 226, 226);
     }
@@ -148,14 +166,36 @@ const Button = styled.button`
 
 const Remove = styled.button`
     cursor: pointer;
-    margin-right: 10px;
+    margin-right: 0.25rem;  /* 10px */
     border: none;
+    width: 0.75rem;  /* 30px */
+    height: 0.75rem;  /* 30px */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.45rem;  /* 18px */
+    background-color: #f8f8f8;
+    border-radius: 50%;
+    &:hover {
+        background-color: #e0e0e0;
+    }
 `
 
 const Add = styled.button`
     cursor: pointer;
-    margin-left: 10px;
+    margin-left: 0.25rem;  /* 10px */
     border: none;
+    width: 0.75rem;  /* 30px */
+    height: 0.75rem;  /* 30px */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.45rem;  /* 18px */
+    background-color: #f8f8f8;
+    border-radius: 50%;
+    &:hover {
+        background-color: #e0e0e0;
+    }
 `
 
 function Detail() {

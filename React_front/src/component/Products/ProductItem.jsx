@@ -5,10 +5,10 @@ import { useLanguage } from '../../context/LanguageContext';
 
 const Container = styled.div`
     flex: 1;
-    margin: 15px;
+    margin: 0.375rem;  /* 15px */
     position: relative;
-    min-width: 280px;
-    height: 370px;
+    min-width: 7rem;  /* 280px */
+    height: 9.25rem;  /* 370px */
     transition: all 0.3s ease; // 过渡效果
     cursor: pointer;
     
@@ -27,28 +27,28 @@ const InfoContainer = styled.div`
     bottom: 0;
     left: 0;
     width: 96%;
-    padding: 5px;
+    padding: 0.125rem;  /* 5px */
     background: linear-gradient(to top, rgba(166, 166, 166, 0.8), transparent);
 `
 
 const Title = styled.h3`
     color: black;
-    font-size: 18px;
-    margin: 10px;
-    margin-bottom: 5px;
+    font-size: 0.45rem;  /* 18px */
+    margin: 0.25rem;  /* 10px */
+    margin-bottom: 0.125rem;  /* 5px */
 `
 
 const Price = styled.div`
     color: black;
-    font-size: 16px;
+    font-size: 0.4rem;  /* 16px */
     font-weight: 500;
 `
 
 const Saled = styled.div`
     color: black;
-    font-size: 16px;
+    font-size: 0.4rem;  /* 16px */
     font-weight: 500;
-    margin-top: 5px;
+    margin-top: 0.125rem;  /* 5px */
 `
 
 function ProductItem({item}) {

@@ -7,8 +7,8 @@ function Search() {
       <div className="search-wrapper">
         <svg 
           xmlns="http://www.w3.org/2000/svg" 
-          width="16" 
-          height="16" 
+          width="1.3rem" 
+          height="1.3rem" 
           fill="currentColor" 
           className="search-icon" 
           viewBox="0 0 16 16"

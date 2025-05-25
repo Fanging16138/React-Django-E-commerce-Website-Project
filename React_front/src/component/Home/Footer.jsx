@@ -3,27 +3,27 @@ import { useNavigate } from "react-router-dom";
 
 const Container = styled.div`
     flex: 1;
-    display : flex;
-    padding: 20px;
+    display: flex;
+    padding: 0.5rem;  /* 20px */
     background-color: rgb(245, 245, 245);
 `
 const Left = styled.div`
     flex: 1;
     display: flex;
     flex-direction: column; // 垂直排列
-    padding: 5px;
+    padding: 0.125rem;  /* 5px */
 `
 const Logo = styled.h1`
-    margin-bottom: 10px;
-    padding-left: 20px;
+    margin-bottom: 0.25rem;  /* 10px */
+    padding-left: 0.5rem;  /* 20px */
     text-align: left;
-    font-size: 40px;
+    font-size: 1rem;  /* 40px */
     font-weight: bold;
 `
 
 const Desc = styled.p`
-    margin: 20px 2px;
-    font-size: 15px;
+    margin: 0.5rem 0.05rem;  /* 20px 2px */
+    font-size: 0.375rem;  /* 15px */
     text-align: left;  // 文字左对齐
     padding-left: 0;   // 移除左内边距
     max-width: 80%;    // 控制文本宽度
@@ -32,12 +32,12 @@ const Desc = styled.p`
 
 const SocialContainer = styled.div`
     display: flex;
-    gap: 25px; // 图标之间的间距
+    gap: 0.625rem;  /* 25px */
 `
 
 const SocialIcon = styled.div`
-    width: 45px;
-    height: 45px;
+    width: 1.125rem;  /* 45px */
+    height: 1.125rem;  /* 45px */
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -83,19 +83,20 @@ const GoogleIcon = styled(SocialIcon)`
 `
 
 const Icon = styled.img`
-    width: 25px;
-    height: 25px;
+    width: 0.625rem;  /* 25px */
+    height: 0.625rem;  /* 25px */
     filter: brightness(0) invert(1); // 将图标颜色改为白色
 `
 const Center = styled.div`
     flex: 1;
-    padding: 20px;
+    padding: 0.5rem;  /* 20px */
 `
 
 const Title = styled.h2`
-    margin-bottom: 30px;
+    margin-bottom: 0.75rem;  /* 30px */
     padding-left: 0;
     text-align: left;
+    font-size: 0.5rem;  /* 20px */
 `
 const List = styled.ul`
     margin: 0;
@@ -110,32 +111,34 @@ const List = styled.ul`
 
 const ListItem = styled.li`
     width: 50%;
-    margin-bottom: 10px;
+    margin-bottom: 0.25rem;  /* 10px */
     cursor: pointer;
+    font-size: 0.375rem;  /* 15px */
     &:hover {
-        color:rgb(74, 194, 237);
+        color: rgb(74, 194, 237);
     }
 `
 
 const Right = styled.div`
     flex: 1;
-    padding: 20px;
+    padding: 0.5rem;  /* 20px */
 `
 
 const ContactItem = styled.div`
-    margin-bottom: 20px;
+    margin-bottom: 0.5rem;  /* 20px */
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 0.25rem;  /* 10px */
     cursor: pointer;
+    font-size: 0.375rem;  /* 15px */
     &:hover {
-        color:rgb(74, 194, 237);
+        color: rgb(74, 194, 237);
     }
 `
 
 const ContactIcon = styled.img`
-    width: 20px;
-    height: 20px;
+    width: 0.5rem;  /* 20px */
+    height: 0.5rem;  /* 20px */
     filter: brightness(0) saturate(100%) invert(38%) sepia(99%) saturate(2476%) hue-rotate(202deg) brightness(98%) contrast(96%); // 蓝色
 `
 

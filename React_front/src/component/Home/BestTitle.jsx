@@ -2,25 +2,25 @@ import styled from 'styled-components';
 
 const TitleContainer = styled.div`
     text-align: center;
-    margin-top: 20px;
+    margin-top: 0.5rem;  /* 20px */
     display: inline-flex; // 容器适应内容大小
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 0.25rem;  /* 10px */
     background-color: rgb(238, 216, 138);
-    padding: 10px 30px;
-    border-radius: 8px;
+    padding: 0.25rem 0.75rem;  /* 10px 30px */
+    border-radius: 0.2rem;  /* 8px */
 `
 
 const Title = styled.h1`
-    font-size: 40px;
+    font-size: 1rem;  /* 40px */
     color: black;
     margin: 0;
 `
 
 const FireIcon = styled.img`
-    width: 27px;
-    height: 27px;
+    width: 0.675rem;  /* 27px */
+    height: 0.675rem;  /* 27px */
 `
 
 function BestTitle() {
