@@ -10,6 +10,9 @@ const Container = styled.div`
     margin-top: 0.5rem;
     padding-left: 0;
     text-align: left;
+    @media (max-width: 480px) {
+        margin-top: 2rem;
+    }
 `
 
 const FilterContainer = styled.div`
@@ -29,6 +32,9 @@ const Title = styled.h3`
     font-weight: 500;
     margin: 0;
     padding: 0;
+    @media (max-width: 480px) {
+        font-size: 0.7rem;
+    }
 `
 
 const Sale = styled.button`
