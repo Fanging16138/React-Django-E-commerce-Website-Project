@@ -12,10 +12,7 @@ const Container = styled.div`
     text-align: left;
 `
 
-// const Title = styled.h1`
-//     font-size: 40px;
-//     margin: 5px;
-// `
+
 
 const FilterContainer = styled.div`
     display: flex;
@@ -39,7 +36,7 @@ const Title = styled.h3`
 const Sale = styled.button`
     border: none;
     padding: 8px 15px;
-    background-color: ${props => props.active ? 'rgba(166, 227, 202, 0.5)' : 'rgba(227, 227, 227, 0.3)'};
+    background-color: ${props => props.$active ? 'rgba(166, 227, 202, 0.5)' : 'rgba(227, 227, 227, 0.3)'};
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -60,7 +57,7 @@ const Sale = styled.button`
 const Price = styled.button`
     border: none;
     padding: 8px 15px;
-    background-color: ${props => props.active ? 'rgba(166, 227, 202, 0.5)' : 'rgba(227, 227, 227, 0.3)'};
+    background-color: ${props => props.$active ? 'rgba(166, 227, 202, 0.5)' : 'rgba(227, 227, 227, 0.3)'};
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -88,7 +85,7 @@ const ArrowIcon = styled.img`
 const New = styled.button`
     border: none;
     padding: 8px 15px;
-    background-color: ${props => props.active ? 'rgba(166, 227, 202, 0.5)' : 'rgba(227, 227, 227, 0.3)'};
+    background-color: ${props => props.$active ? 'rgba(166, 227, 202, 0.5)' : 'rgba(227, 227, 227, 0.3)'};
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -202,19 +199,19 @@ function ProductList() {
                 <Filter>
                     <Sale 
                         onClick={handleSaleClick}
-                        active={sortType === 'sale'}
+                        $active={sortType === 'sale'}
                     >
                         <Title>Sales volume</Title>
                     </Sale>
                     <New 
                         onClick={handleNewClick}
-                        active={sortType === 'new'}
+                        $active={sortType === 'new'}
                     >
                         <Title>New</Title>
                     </New>
                     <Price 
                         onClick={handlePriceSort}
-                        active={sortType === 'price'}
+                        $active={sortType === 'price'}
                     >
                         <Title>Price</Title>
                         {priceSort === true && <ArrowIcon src="/caret-up-fill.svg" alt="sort up" />}

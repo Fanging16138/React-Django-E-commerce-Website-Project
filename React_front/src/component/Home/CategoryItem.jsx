@@ -9,6 +9,10 @@ const Container = styled.div`
     margin: 5px;
     height: 65vh;
     position: relative;
+    @media (max-width: 480px) {
+        height: 30vh;
+        width: 100%;
+    }
 `
 
 const Image = styled.img`
@@ -16,6 +20,10 @@ const Image = styled.img`
     height: 100%;
     object-fit: cover;
     border-radius: 2%;
+    @media (max-width: 480px) {
+        height: 100%;
+        width: 100%;
+    }
 `
 
 const Info = styled.div`
@@ -28,6 +36,10 @@ const Info = styled.div`
     align-items: center; //水平居中
     justify-content: center; //垂直居中
     flex-direction: column;  //垂直布局
+    @media (max-width: 480px) {
+        width: 100%;
+        height: 100%;
+    }
 `
 
 const Title = styled.h1`
@@ -35,6 +47,11 @@ const Title = styled.h1`
     color: white;
     margin-bottom: 20px;
     -webkit-text-stroke: 2px black;  // 增加边框粗细并改为黑色
+    @media (max-width: 480px) {
+        font-size: 15px;
+        -webkit-text-stroke: none;  // 取消边框
+        text-shadow: none;  // 取消阴影
+    }
     text-shadow: 
         2px 2px 0 #000,
         -2px -2px 0 #000,
@@ -47,6 +64,9 @@ const Button = styled(motion.button)`
     border: none;
     cursor: pointer;
     font-weight: 600;
+    @media (max-width: 480px) {
+        font-size: 8px;
+    }
 `
 
 

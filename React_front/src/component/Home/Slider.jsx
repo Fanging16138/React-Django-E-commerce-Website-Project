@@ -10,6 +10,11 @@ const Container = styled.div`
     position: relative;
     overflow: hidden; //超出隐藏
     margin-top: 50px;  // 为导航栏留出空间
+    @media (max-width: 480px) {
+        height: 31vh;
+        width: 100%;
+        margin-top: 32px;
+    }
 `;
 
 const Arrow = styled.div`
@@ -29,6 +34,10 @@ const Arrow = styled.div`
     z-index: 2;
     left: ${props => props.direction === "left" && "10px"};
     right: ${props => props.direction === "right" && "10px"};
+    @media (max-width: 480px) {
+        width: 20px;
+        height: 20px;
+    }
 `;
 
 const Wrapper = styled.div`
@@ -45,6 +54,9 @@ const Slide = styled.div`
     display: flex;
     align-items: center;
     background-color: ${props => props.$bg};//props.bg 是传入的背景颜色
+    @media (max-width: 480px) {
+        height: 55vh;
+    }
 `
 
 const ImageContainer = styled.div`
@@ -52,20 +64,37 @@ const ImageContainer = styled.div`
     height: 100%;
     flex: 1;
     display: flex;
+    @media (max-width: 480px) {
+        height: 100%;
+    }
 `
 
 const InfoContainer = styled.div`
     flex: 1;
     padding: 40px;
+    @media (max-width: 480px) {
+        height: 55vh;
+        width: 100%;
+        padding: 0px;
+        margin-top: 70px;
+    }
 `
 
 const Image = styled.img`
     height: 100%;
+    @media (max-width: 480px) {
+        height: 57%;
+        padding-right: 10px;
+    }
 `
 
 const Title = styled.h1`
     font-size: 70px;
     margin-bottom: 10px;
+    @media (max-width: 480px) {
+        font-size: 27px;
+        margin-bottom: 20px;
+    }
 `
 
 const Desc = styled.p`
@@ -73,6 +102,12 @@ const Desc = styled.p`
     margin: 50px 0px;
     font-weight: 500;
     letter-spacing: 3px;
+    @media (max-width: 480px) {
+        font-size: 8px;
+        margin: 20px 3px;
+        margin-bottom: 15px;
+        padding-right: 10px;
+    }
 `
 
 const Button = styled.button`
@@ -87,6 +122,11 @@ const Button = styled.button`
     &:hover {
         background-color: rgb(18, 16, 24);
         color: white;
+    }
+    @media (max-width: 480px) {
+        font-size: 11px;
+        padding: 5px;
+        margin-bottom: 15px;
     }
 `
 

@@ -6,7 +6,7 @@ import Shop from './Shop';
 import Login from './Login';
 import useScrollPosition from '../../hooks/useScrollPosition';
 
-const Navbar = ({ children }) => {
+const Navbar = () => {
   const scrolled = useScrollPosition();
   const [cartCount, setCartCount] = useState(Number(localStorage.getItem('cartCount')) || 0);
 
@@ -17,8 +17,8 @@ const Navbar = ({ children }) => {
     };
     window.addEventListener('cartCountUpdated', handleCartCountUpdate);
 
-    // 初始化
-    setCartCount(Number(localStorage.getItem('cartCount')) || 0);
+    // 从本地浏览器存储中获取购物车数量
+    setCartCount(Number(localStorage.getItem('cartCount')) || 0); 
 
     return () => {
       window.removeEventListener('cartCountUpdated', handleCartCountUpdate);

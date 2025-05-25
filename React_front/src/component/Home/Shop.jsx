@@ -10,6 +10,7 @@ const Container = styled.div`
 
 
 function Shop() {
+    // 购物车商品种类=购物车商品数量
     const [cartKinds, setCartKinds] = useState(
         (() => {
             const cart = JSON.parse(localStorage.getItem('cart')) || [];

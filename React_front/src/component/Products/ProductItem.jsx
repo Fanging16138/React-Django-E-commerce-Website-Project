@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import BestProductItem from "../Home/BestProductItem";
 import { useNavigate } from "react-router-dom";
+import { useLanguage } from '../../context/LanguageContext';
 
 const Container = styled.div`
     flex: 1;
@@ -52,6 +53,7 @@ const Saled = styled.div`
 
 function ProductItem({item}) {
     const navigate = useNavigate();
+    const { language } = useLanguage();
 
     const handleClick = () => {
         navigate(`/products/${item.id}`);
@@ -65,7 +67,7 @@ function ProductItem({item}) {
         <Container onClick={handleClick}>
             <Image src={item.img} key={item.id}/>
             <InfoContainer>
-                <Title>{item.title_en || item.title_cn}</Title>
+                <Title>{language === 'English' ? item.title_en : item.title_cn}</Title>
                 <Price>${item.price}</Price>
                 <Saled>Saled: {item.saled} Pieces</Saled>
             </InfoContainer>

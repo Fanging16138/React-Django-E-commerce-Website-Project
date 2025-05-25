@@ -121,7 +121,7 @@ const Login = () => {
         <>
             {user ? (
                 <div className="user-info">
-                    <span className="username">{user.username}</span>
+                        <span className="username">{user.username}</span>
                     <button onClick={handleLogout} className="logout-btn">
                         登出
                     </button>
@@ -136,75 +136,76 @@ const Login = () => {
                     </button>
                 </div>
             )}
-
-            {showModal && (
-                <div className="modal-overlay" onClick={handleClose}>
-                    <div className="modal-content" onClick={e => e.stopPropagation()}>
-                        <div className="modal-header">
-                            <h2>{isLogin ? '登录' : '注册'}</h2>
-                            <button className="close-btn" onClick={handleClose}>×</button>
-                        </div>
-                        
-                        {showLoginPrompt && (
-                            <div className="login-prompt">
-                                请先登录以继续操作
-                            </div>
-                        )}
-                        
-                        {error && <div className="error-message">{error}</div>}
-                        {success && <div className="success-message">{success}</div>}
-                        
-                        <form onSubmit={handleSubmit}>
-                            <div className="form-group">
-                                <label>用户名</label>
-                                <input
-                                    type="text"
-                                    name="username"
-                                    value={formData.username}
-                                    onChange={handleChange}
-                                    required
-                                />
+                {showModal && (
+                    <div className="login-container">
+                        <div className="modal-overlay" onClick={handleClose}>
+                            <div className="modal-content" onClick={e => e.stopPropagation()}>
+                            <div className="modal-header">
+                                <h2>{isLogin ? '登录' : '注册'}</h2>
+                                <button className="close-btn" onClick={handleClose}>×</button>
                             </div>
                             
-                            <div className="form-group">
-                                <label>密码</label>
-                                <input
-                                    type="password"
-                                    name="password"
-                                    value={formData.password}
-                                    onChange={handleChange}
-                                    required
-                                />
-                            </div>
-
-                            {!isLogin && (
+                            {showLoginPrompt && (
+                                <div className="login-prompt">
+                                    请先登录以继续操作
+                                </div>
+                            )}
+                            
+                            {error && <div className="error-message">{error}</div>}
+                            {success && <div className="success-message">{success}</div>}
+                            
+                            <form onSubmit={handleSubmit}>
                                 <div className="form-group">
-                                    <label>邮箱</label>
+                                    <label>用户名</label>
                                     <input
-                                        type="email"
-                                        name="email"
-                                        value={formData.email}
+                                        type="text"
+                                        name="username"
+                                        value={formData.username}
                                         onChange={handleChange}
                                         required
                                     />
                                 </div>
-                            )}
+                                
+                                <div className="form-group">
+                                    <label>密码</label>
+                                    <input
+                                        type="password"
+                                        name="password"
+                                        value={formData.password}
+                                        onChange={handleChange}
+                                        required
+                                    />
+                                </div>
 
-                            <button type="submit" className="submit-btn">
-                                {isLogin ? '登录' : '注册'}
-                            </button>
-                        </form>
+                                {!isLogin && (
+                                    <div className="form-group">
+                                        <label>邮箱</label>
+                                        <input
+                                            type="email"
+                                            name="email"
+                                            value={formData.email}
+                                            onChange={handleChange}
+                                            required
+                                        />
+                                    </div>
+                                )}
 
-                        <div className="switch-form">
-                            <button
-                                onClick={() => setIsLogin(!isLogin)}
-                                className="switch-btn"
-                            >
-                                {isLogin ? '没有账号？去注册' : '已有账号？去登录'}
-                            </button>
+                                <button type="submit" className="submit-btn">
+                                    {isLogin ? '登录' : '注册'}
+                                </button>
+                            </form>
+
+                            <div className="switch-form">
+                                <button
+                                    onClick={() => setIsLogin(!isLogin)}
+                                    className="switch-btn"
+                                >
+                                    {isLogin ? '没有账号？去注册' : '已有账号？去登录'}
+                                </button>
+                            </div>
                         </div>
-                    </div>
-                </div>
+                        </div>
+                    </div>              
             )}
         </>
     );

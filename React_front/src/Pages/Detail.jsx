@@ -2,11 +2,42 @@ import styled from "styled-components";
 import Navbar from "../component/Home/Navbar";
 import Ads_top from "../component/Home/Ads_top";
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { showLoginModal } from '../component/Home/Login';
+import { useLanguage } from '../context/LanguageContext';
 
-const Container = styled.div``
+const Container = styled.div`
+    position: relative;
+`
+
+const BackButton = styled.div`
+    position: absolute;
+    top: 120px;
+    left: 20px;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 10;
+    transition: all 0.3s ease;
+
+    &:hover {
+        transform: scale(1.1);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    svg {
+        width: 24px;
+        height: 24px;
+        color: #333;
+    }
+`
 
 const Wrapper = styled.div`
     padding: 50px;
@@ -75,21 +106,21 @@ const FilterColor = styled.div`
     height: 20px;
     border-radius: 50%;
     background: ${props =>{
-        if (props.color.includes('and')) {
-            const [color1, color2] = props.color.split(' and ');
+        if (props.$color.includes('and')) {
+            const [color1, color2] = props.$color.split(' and ');
             return `linear-gradient(to right, ${color1} 0%, ${color1} 50%, ${color2} 50%, ${color2} 100%)`;
         }
-        else if (props.color.includes('_')) {
-            return props.colorMapping[props.color]?.code || props.color;
+        else if (props.$color.includes('_')) {
+            return props.$colorMapping[props.$color]?.code || props.$color;
         }
         else{
-            return props.color;
+            return props.$color;
         }
     }};
     margin: 0px 6px;
     cursor: pointer;
     margin-left: 8px;
-    border: ${props => props.selected ? '2px solid #000' : '1px solid #ddd'};
+    border: ${props => props.$selected ? '2px solid #000' : '1px solid #ddd'};
 `
 
 const FilterSize = styled.select`
@@ -127,8 +158,10 @@ const Add = styled.button`
     border: none;
 `
 
-function Detail(props) {
+function Detail() {
     const { id } = useParams();
+    const navigate = useNavigate();
+    const { language } = useLanguage();
     const [amount, setAmount] = useState(1);
     const [product, setProduct] = useState(null);
     const [productDetail, setProductDetail] = useState(null);
@@ -244,6 +277,10 @@ function Detail(props) {
         alert("已添加到购物车");
     };
 
+    const handleBack = () => {
+        navigate(-1);
+    };
+
     if (loading) {
         return <div>Loading...</div>;
     }
@@ -260,14 +297,19 @@ function Detail(props) {
         <Container>
             <Navbar />
             <Ads_top />
+            <BackButton onClick={handleBack}>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                    <path fillRule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
+                </svg>
+            </BackButton>
             <Wrapper>
                 <ImageContainer>
                     <Image src={`/Images/Products/${product.category}/${productDetail.number}/${selectedColor || 'default'}.jpg`} />
                 </ImageContainer>
                 <InfoContainer>
-                    <Title>{product.title_en || product.title_cn}</Title>
+                    <Title>{language === 'English' ? product.title_en : product.title_cn}</Title>
                     <Price>${product.price}</Price>
-                    <Desc>{productDetail.desc_en}</Desc>
+                    <Desc>{language === 'English' ? productDetail.desc_en : productDetail.desc_cn}</Desc>
                     <Saled>Sales: {product.saled} Pieces</Saled>
                     <Time>Listed: {new Date(product.time).toLocaleDateString()}</Time>
                     <FilterContainer>
@@ -276,9 +318,9 @@ function Detail(props) {
                             {productDetail.color.map((color) => (
                                 <FilterColor 
                                     key={color}
-                                    color={color}
-                                    colorMapping={productDetail.color_mapping}
-                                    selected={selectedColor === color}
+                                    $color={color}
+                                    $colorMapping={productDetail.color_mapping}
+                                    $selected={selectedColor === color}
                                     onClick={() => setSelectedColor(color)}
                                 />
                             ))}
